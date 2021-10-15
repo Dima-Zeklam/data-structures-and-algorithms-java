@@ -3,12 +3,18 @@
  */
 package linkedlist;
 
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        LinkedList<Integer> linkedList = new LinkedList<Integer>();
+        linkedList.toString();
+        linkedList.insert(10);
+        linkedList.insert(9);
+        linkedList.insert(8);
+         System.out.println(linkedList.toString());
+        System.out.println(linkedList.includes(9));
+
     }
 }
