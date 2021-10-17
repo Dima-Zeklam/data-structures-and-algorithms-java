@@ -24,17 +24,18 @@ toString | used to return the collection of the Linked List
 
 ## Approach & Efficiency
 * create a Linked List based on an initial node which is the head.
-* create simple method for insert by decalre a new node and make point to the head.
-  I use this approuch because the time and space complexity is **O(1)**.
+* create simple method for insert by declare a new node and make point to the head.
+  I use this approach because the time and space complexity is **O(1)**.
 * using while loop that check if the node not equal to null and next of type node to stepping at the Linked List.
   **Time -> O(n) Space -> O(1)**
 
 
 ## API
-1. insert(value) - accept value and add it to the first of the linked list and return nothing.
+1. insert(value) - accept value and add it to the first of the linked list and return nothing, **Time -> O(1) & Space -> O(1)**
 
-2. includes(value) - accept one parameter which is the value, and return true if the value is exist in the list and false if it is not exist.
+2. includes(value) - accept one parameter which is the value, and return true if the value is exist in the list and false if it is not exist, **Time -> O(n) & Space -> O(1)**
 
-3. toString() - method that return String collection of the linked list as following format:
+4. toString() - method that return String collection of the linked list as following format:
 
-> "{ a } -> { b } -> { c } -> NULL" 
+> "{ a } -> { b } -> { c } -> NULL"
+ **Time -> O(n) & Space -> O(1)**
