@@ -7,10 +7,11 @@ Input |	Output
 
 ## Whiteboard Process
 
-![Reverse an Array ](whiteboard.png)
+![Reverse an Array ](reverseArray.png)
 
 ## Approach & Efficiency
 The approach i take is by using for loop and make the starting number from the last index of the array, i use this way because i think is simple and don't edit the original array.
+time O(n)
 space O(n)
-time O(1)
+
 
