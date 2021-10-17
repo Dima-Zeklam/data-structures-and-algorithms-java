@@ -28,14 +28,16 @@ toString | used to return the collection of the Linked List
   I use this approach because the time and space complexity is **O(1)**.
 * using while loop that check if the node not equal to null and next of type node to stepping at the Linked List.
   **Time -> O(n) Space -> O(1)**
+* time and space complexity for insert method are **Time -> O(1) & Space -> O(1)** 
+* time and space complexity for includes method are **Time -> O(n) & Space -> O(1)**
+* time and space complexity for toString method are **Time -> O(n) & Space -> O(1)**
 
 
 ## API
-1. insert(value) - accept value and add it to the first of the linked list and return nothing, **Time -> O(1) & Space -> O(1)**
+1. insert(value) - accept value and add it to the first of the linked list and return nothing.
 
-2. includes(value) - accept one parameter which is the value, and return true if the value is exist in the list and false if it is not exist, **Time -> O(n) & Space -> O(1)**
+2. includes(value) - accept one parameter which is the value, and return true if the value is exist in the list and false if it is not exist.
 
 4. toString() - method that return String collection of the linked list as following format:
 
 > "{ a } -> { b } -> { c } -> NULL"
- **Time -> O(n) & Space -> O(1)**
