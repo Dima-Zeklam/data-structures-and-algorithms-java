@@ -8,11 +8,23 @@ public class App {
     public static void main(String[] args) {
         LinkedList<Integer> linkedList = new LinkedList<Integer>();
         linkedList.toString();
-        linkedList.insert(10);
+        linkedList.insert(11);
         linkedList.insert(9);
         linkedList.insert(8);
         System.out.println(linkedList.toString());
         System.out.println(linkedList.includes(9));
-
+        System.out.println("----------------------------");
+        // append number 12 at the end of the list
+        linkedList.append(12);
+        System.out.println(linkedList.toString());
+        // add number 10 before number 11
+        linkedList.insertBefore(11,10);
+        System.out.println(linkedList.toString());
+        // Add 13 after 12
+        linkedList.insertAfter(12,13);
+        System.out.println(linkedList.toString());
+        // Add 99 after 9
+        linkedList.insertAfter(9,99);
+        System.out.println(linkedList.toString());
     }
 }

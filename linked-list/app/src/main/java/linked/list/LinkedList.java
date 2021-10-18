@@ -37,4 +37,50 @@ public class LinkedList<T> {
         return output;
     }
 
+    //Append to the end of list
+    public void append(T value){
+        Node newNode = new Node(value);
+        Node current = head;
+        while(current != null ){
+            if(current.next == null){
+                current.next = newNode;
+                break;
+            }else
+                current = current.next;
+                   }
+    }
+    public void insertBefore(T value,T newValue){
+        Node newNode = new Node(newValue);
+        Node current = head;
+        if(current.value.equals(value)){
+            newNode.next = head;
+            head = newNode;
+        }else{
+        while(current!= null){
+            if(current.next.value.equals(value)){
+                newNode.next = current.next;
+                current.next = newNode;
+                break;
+            }else
+                current=current.next;
+        }
+        }
+
+    }
+    public void insertAfter(T value,T newValue){
+        Node newNode = new Node(newValue);
+        Node current = head;
+            while(current != null){
+                if(current.value.equals(value)){
+                    newNode.next = current.next;
+                    current.next = newNode;
+
+                    break;
+                }else
+                    current=current.next;
+            }
+
+    }
+
+
 }

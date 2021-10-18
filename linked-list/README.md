@@ -38,6 +38,73 @@ toString | used to return the collection of the Linked List
 
 2. includes(value) - accept one parameter which is the value, and return true if the value is exist in the list and false if it is not exist.
 
-4. toString() - method that return String collection of the linked list as following format:
+3. toString() - method that return String collection of the linked list as following format:
 
 > "{ a } -> { b } -> { c } -> NULL"
+
+----------
+# Append
+# Challenge Summary
+Create a method named Append that accept new value, and adds a new node with the given value to the end of the list
+
+## Whiteboard Process
+![AppenToEnd](AppenToEnd.png)
+
+## Approach & Efficiency
+use one while loop to move to last node, **Time = O(n) , space O(1)** .
+
+## Solution
+input : 12 -> add 12 to the end
+the list before : { 8 } -> { 9 } -> { 11 } -> NULL
+list after append 12 to the end : { 8 } -> { 9 } -> { 11 } -> { 12 } -> NULL
+
+# Insert Before
+# Challenge Summary
+Create a method named insertBefore that accept selected node value and new value, and adds a new node with the given value before selected node value.
+
+## Whiteboard Process
+![InsertBefore](InsertBefore.png)
+
+## Approach & Efficiency
+
+Can successfully insert a node before a node located i the middle of a linked list.
+Can successfully insert a node before the first node of a linked list.
+**Time = O(n) , space O(1)**
+
+## Solution
+Example 1:
+input : (12,111) ->  add 111 before 12
+the list before :  { 9 } -> { 10 } -> { 11 } -> { 12 } -> NULL
+list after append 12 to the end :  { 9 } -> { 10 } -> { 11 } -> { 111 } -> { 12 } -> NULL
+
+Example 2:
+input : (9,8) ->  add 8 before 9 (head node) 
+the list before : { 9 } -> { 10 } -> { 11 } -> { 12 } -> NULL
+list after append 12 to the end : { 8 } -> { 9 } -> { 10 } -> { 11 } -> { 111 } -> { 12 } -> NULL
+
+
+# Insert After
+# Challenge Summary
+Create a method named insertAfter that accept selected node value and new value,
+and adds a new node with the given value after selected node value.
+
+## Whiteboard Process
+![InsetAfter](InsetAfter.png)
+
+## Approach & Efficiency
+
+Can successfully insert after a node in the middle of the linked list.
+Can successfully insert a node after the last node of the linked list
+**Time = O(n) , space O(1)**
+
+## Solution
+Example 1:
+input : (12,13) ->  add 13 after 12
+the list before : { 8 } -> { 9 } -> { 10 } -> { 11 } -> { 12 } -> NULL
+list after append 12 to the end :  { 8 } -> { 9 } -> { 10 } -> { 11 } -> { 12 } -> { 13 } -> NULL
+
+Example 2:
+input : (9,99) ->  add 99 after 9 
+the list before :{ 8 } -> { 9 } -> { 10 } -> { 11 } -> { 12 } -> NULL
+list after append 12 to the end : { 8 } -> { 9 } -> { 99 } -> { 10 } -> { 11 } -> { 12 } -> NULL
+
