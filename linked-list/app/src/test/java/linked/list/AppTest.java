@@ -82,4 +82,84 @@ class AppTest {
         String expect = "{ 96 } -> { 97 } -> { 98 } -> { 99 } -> { 100 } -> NULL";
         assertEquals(expect,List.toString());
     }
+
+//    Can successfully add a node to the end of the linked list
+@Test void TestAppendToEnd() {
+    LinkedList <Integer> List = new LinkedList<Integer>();
+    List.insert(99);
+    List.insert(98);
+    List.insert(97);
+    List.insert(96);
+    List.append(100);
+
+    String expect = "{ 96 } -> { 97 } -> { 98 } -> { 99 } -> { 100 } -> NULL";
+    assertEquals(expect,List.toString());
+}
+
+//    Can successfully add multiple nodes to the end of a linked list
+@Test void TestAppendMultipleValueToEnd() {
+    LinkedList <Integer> List = new LinkedList<Integer>();
+    List.insert(92);
+    List.insert(91);
+    List.insert(90);
+    List.append(93);
+    List.append(94);
+    List.append(95);
+    List.append(96);
+    String expect = "{ 90 } -> { 91 } -> { 92 } -> { 93 } -> { 94 } -> { 95 } -> { 96 } -> NULL";
+    assertEquals(expect,List.toString());
+}
+//    Can successfully insert a node before a node located i the middle of a linked list
+@Test void TestInsertBefore() {
+    LinkedList <Integer> List = new LinkedList<Integer>();
+    List.insert(95);
+    List.insert(94);
+    List.insert(93);
+    List.insert(91);
+    List.insert(90);
+    List.insertBefore(93,92);
+
+    String expect = "{ 90 } -> { 91 } -> { 92 } -> { 93 } -> { 94 } -> { 95 } -> NULL";
+    assertEquals(expect,List.toString());
+}
+//    Can successfully insert a node before the first node of a linked list
+@Test void TestInsertBeforeFirstNode() {
+    LinkedList <Integer> List = new LinkedList<Integer>();
+    List.insert(93);
+    List.insert(92);
+    List.insert(91);
+    List.insert(90);
+    List.insertBefore(90,89);
+
+    String expect = "{ 89 } -> { 90 } -> { 91 } -> { 92 } -> { 93 } -> NULL";
+    assertEquals(expect,List.toString());
+}
+//    Can successfully insert after a node in the middle of the linked list
+@Test void TestInsertAfterNode() {
+    LinkedList <Integer> List = new LinkedList<Integer>();
+    List.insert(94);
+    List.insert(93);
+    List.insert(91);
+    List.insert(90);
+    List.insert(89);
+    List.insertAfter(91,92);
+
+    String expect = "{ 89 } -> { 90 } -> { 91 } -> { 92 } -> { 93 } -> { 94 } -> NULL";
+    assertEquals(expect,List.toString());
+}
+
+//    Can successfully insert a node after the last node of the linked list
+@Test void TestInsertAfterLastNode() {
+    LinkedList <Integer> List = new LinkedList<Integer>();
+    List.insert(93);
+    List.insert(92);
+    List.insert(91);
+    List.insert(90);
+    List.insert(89);
+
+    List.insertAfter(93,94);
+
+    String expect = "{ 89 } -> { 90 } -> { 91 } -> { 92 } -> { 93 } -> { 94 } -> NULL";
+    assertEquals(expect,List.toString());
+}
 }
