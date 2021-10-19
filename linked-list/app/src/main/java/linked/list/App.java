@@ -6,8 +6,7 @@ package linked.list;
 public class App {
 
     public static void main(String[] args) {
-        LinkedList<Integer> linkedList = new LinkedList<Integer>();
-        linkedList.toString();
+        LinkedList<Integer> linkedList = new LinkedList<>();
         linkedList.insert(11);
         linkedList.insert(9);
         linkedList.insert(8);
@@ -24,11 +23,9 @@ public class App {
         linkedList.insertAfter(12,13);
         System.out.println(linkedList.toString());
         // Add 99 after 9
-//        linkedList.insertAfter(9,99);
-//        System.out.println(linkedList.toString());
-//        System.out.println( linkedList.kthFromEnd(1));
+
         System.out.println("------------Test kthFromEnd----------------");
-           LinkedList<Integer> ll = new LinkedList<Integer>();
+           LinkedList<Integer> ll = new LinkedList<>();
         System.out.println(" // if the Linked list is empty");
         System.out.println( ll.kthFromEnd(0));
 
@@ -53,5 +50,21 @@ public class App {
         System.out.println( ll.toString());
         System.out.println( ll.kthFromEnd(2));
 
+        System.out.println("------------Test zipLists---------------");
+        LinkedList<Integer> List = new LinkedList<>();
+        LinkedList<Integer>List1 = new LinkedList<>();
+        List1.append(10);
+        List1.append(11);
+        List1.append(12);
+        LinkedList<Integer> List2 = new LinkedList<>();
+        List2.append(9);
+        List2.append(3);
+        List2.append(4);
+        List2.append(55);
+        List2.append(90);
+        List2.append(40);
+        System.out.println(List.zipLists(List1,List2));
+        System.out.println(List1.toString());
+        System.out.println(List2.toString());
     }
 }

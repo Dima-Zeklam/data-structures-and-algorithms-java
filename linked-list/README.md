@@ -151,4 +151,34 @@ Use for loop to start the index from the end of the list and use size to know th
    * input ->  { 1 } -> { 3 } -> { 8 } -> { 2 } -> NULL , ll.kthFromEnd(2)
    * Output -> value=3
 
+# zipLists
+# Challenge Summary
+<!-- Description of the challenge -->
+Zip the two linked lists together into one so that the nodes alternate between the two
+lists and return a reference to the head of the zipped list.
 
+## Whiteboard Process
+![ZipList](ZipList.png)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Use newlist and append the values inside it by using one  while loop to loop on the nodes in two list.
+**Time -> O(n)**
+**Time -> O(1)**
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+* LinkedList.zipLists(List1,List2));
+
+input :
+  * { 10 } -> { 11 } -> { 12 } -> NULL
+  * { 9 } -> { 3 } -> { 4 } -> { 55 } -> { 90 } -> { 40 } -> NULL
+
+Output :{ 10 } -> { 9 } -> { 11 } -> { 3 } -> { 12 } -> { 4 } -> { 55 } -> { 90 } -> { 40 } -> NULL
+
+// if one of the lists are Empty
+input :
+* NULL
+* { 9 } -> { 3 } -> { 4 } ->  NULL
+
+Output : { 9 } -> { 3 } -> { 4 } ->  NULL
