@@ -24,7 +24,34 @@ public class App {
         linkedList.insertAfter(12,13);
         System.out.println(linkedList.toString());
         // Add 99 after 9
-        linkedList.insertAfter(9,99);
-        System.out.println(linkedList.toString());
+//        linkedList.insertAfter(9,99);
+//        System.out.println(linkedList.toString());
+//        System.out.println( linkedList.kthFromEnd(1));
+        System.out.println("------------Test kthFromEnd----------------");
+           LinkedList<Integer> ll = new LinkedList<Integer>();
+        System.out.println(" // if the Linked list is empty");
+        System.out.println( ll.kthFromEnd(0));
+
+        System.out.println(" // if the Linked list have one node and k =0");
+        ll.insert(2);
+        System.out.println( ll.kthFromEnd(0));
+
+        System.out.println(" // if k value grater than the Linked list length");
+        ll.insert(8);
+        System.out.println( ll.kthFromEnd(8));
+
+        System.out.println("  // if k value same to Linked list length");
+        ll.insert(3);
+        System.out.println( ll.toString());
+        System.out.println( ll.kthFromEnd(3));
+
+        System.out.println("  // if k value is not a positive integer");
+        ll.insert(1);
+        System.out.println( ll.kthFromEnd(-3));
+
+        System.out.println("  // Happy Path where k is not at the end, but some where in the middle of the linked list");
+        System.out.println( ll.toString());
+        System.out.println( ll.kthFromEnd(2));
+
     }
 }

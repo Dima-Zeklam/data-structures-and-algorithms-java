@@ -108,3 +108,47 @@ input : (9,99) ->  add 99 after 9
 the list before :{ 8 } -> { 9 } -> { 10 } -> { 11 } -> { 12 } -> NULL
 list after append 12 to the end : { 8 } -> { 9 } -> { 99 } -> { 10 } -> { 11 } -> { 12 } -> NULL
 
+# kthFromEnd
+# Challenge Summary
+Create method called kthFromEnd accept a number k as a parameter and 
+return the node’s value that is k places from the tail of the linked list.
+
+## Whiteboard Process
+![kthFromEnd](KthFromEnd.png)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Use for loop to start the index from the end of the list and use size to know the length of the list.
+
+**The Space -> O(1) , Time -> O(n).**
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+
+* // If the Linked list is empty  ( NULL )
+   * input -> ll.kthFromEnd(3)
+   * Output -> The List is Empty
+
+* // if the Linked list have one node and k =0 
+  * input ->  { 2 } -> NULL , ll.kthFromEnd(0) 
+  * Output -> value=2
+ 
+
+* // if k value grater than the Linked list length
+    * input ->  { 3 } -> { 8 } -> { 2 } -> NULL , ll.kthFromEnd(8)
+    * Output -> Exception: the value 8 is out of the linked list Boundary
+    
+
+* // if k value same to Linked list length
+   * input ->  { 3 } -> { 8 } -> { 2 } -> NULL , ll.kthFromEnd(3)
+   * Output -> Exception: the value 3 is out of the linked list Boundary
+   
+* // if k value is not a positive integer
+  * input ->  { 3 } -> { 8 } -> { 2 } -> NULL , ll.kthFromEnd(-1)
+  * Output -> Exception: the value -1 is out of the linked list Boundary 
+  
+* // Happy Path where k is not at the end, but somewhere in the middle of the linked list
+   * input ->  { 1 } -> { 3 } -> { 8 } -> { 2 } -> NULL , ll.kthFromEnd(2)
+   * Output -> value=3
+
+
