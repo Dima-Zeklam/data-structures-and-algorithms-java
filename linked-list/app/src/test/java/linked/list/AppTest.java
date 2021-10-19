@@ -162,4 +162,56 @@ class AppTest {
     String expect = "{ 89 } -> { 90 } -> { 91 } -> { 92 } -> { 93 } -> { 94 } -> NULL";
     assertEquals(expect,List.toString());
 }
+    // if the Linked list is empty
+    @Test void TestKth_ListEmpty() {
+    LinkedList<Integer> ll = new LinkedList<Integer>();
+        String expect ="The List is Empty";
+                assertEquals(expect,ll.kthFromEnd(0));
+
+    }
+    // if the Linked list size =1 and k =0
+    @Test void TestKth_ListLengthTo1() {
+        LinkedList<Integer> ll = new LinkedList<Integer>();
+        ll.insert(100);
+        String expect ="value=100";
+        assertEquals(expect,ll.kthFromEnd(0));
+    }
+    // if k value grater than the Linked list length
+    @Test void TestKthGraterThanListSize() {
+        LinkedList<Integer> ll = new LinkedList<Integer>();
+        ll.insert(100);
+        ll.insert(99);
+        ll.insert(89);
+        String expect ="Exception: the value 8 is out of the linked list Boundary";
+        assertEquals(expect,ll.kthFromEnd(8));
+    }
+    // if k value same to Linked list length
+    @Test void TestKthSameListSize() {
+        LinkedList<Integer> ll = new LinkedList<Integer>();
+        ll.insert(100);
+        ll.insert(99);
+        ll.insert(89);
+        String expect ="Exception: the value 3 is out of the linked list Boundary";
+        assertEquals(expect,ll.kthFromEnd(3));
+    }
+    // if k value is not a positive integer
+    @Test void TestKthNegativeValue() {
+        LinkedList<Integer> ll = new LinkedList<Integer>();
+        ll.insert(100);
+        ll.insert(99);
+        ll.insert(89);
+        String expect ="Exception: the value -3 is out of the linked list Boundary";
+        assertEquals(expect,ll.kthFromEnd(-3));
+    }
+    //// Happy Path where k is not at the end, but somewhere in the middle of the linked list
+    @Test void TestKthSomeWhereValue() {
+        LinkedList<Integer> ll = new LinkedList<Integer>();
+        ll.insert(100);
+        ll.insert(99);
+        ll.insert(98);
+        ll.insert(97);
+        ll.insert(96);
+        String expect ="value=98";
+        assertEquals(expect,ll.kthFromEnd(2));
+    }
 }
