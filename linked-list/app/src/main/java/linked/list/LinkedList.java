@@ -57,6 +57,11 @@ public class LinkedList<T> {
     public void append(T value){
         Node newNode = new Node(value);
         Node current = head;
+        if(current == null){
+
+            head = newNode;
+            size ++;
+        }
         while(current != null ){
             if(current.next == null){
                 current.next = newNode;
@@ -101,8 +106,6 @@ public class LinkedList<T> {
 
     }
 
-
-
     public String kthFromEnd(int k){
         int index = 0;
         String value =" ";
@@ -125,5 +128,26 @@ public class LinkedList<T> {
         return value ;
     }
 
+    public  LinkedList<T> zipLists(LinkedList<T> list1, LinkedList<T> list2){
+        LinkedList<T> newList = new LinkedList<>();
+        Node currentList1 = list1.head;
+        Node currentList2 = list2.head;
+        T value;
+        while(currentList1 != null || currentList2 != null){
+
+            if(currentList1 != null){
+                value = (T) currentList1;
+                 newList.append(value);
+                 currentList1 = currentList1.next;
+
+            }
+            if(currentList2 != null) {
+                value = (T) currentList2;
+                 newList.append(value);
+                 currentList2 = currentList2.next;
+            }
+        }
+        return  newList;
+    }
 
 }

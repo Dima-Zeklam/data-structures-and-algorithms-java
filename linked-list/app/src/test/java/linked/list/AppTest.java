@@ -173,7 +173,7 @@ class AppTest {
     @Test void TestKth_ListLengthTo1() {
         LinkedList<Integer> ll = new LinkedList<Integer>();
         ll.insert(100);
-        String expect ="value=100";
+        String expect ="100";
         assertEquals(expect,ll.kthFromEnd(0));
     }
     // if k value grater than the Linked list length
@@ -211,7 +211,48 @@ class AppTest {
         ll.insert(98);
         ll.insert(97);
         ll.insert(96);
-        String expect ="value=98";
+        String expect ="98";
         assertEquals(expect,ll.kthFromEnd(2));
+    }
+    //    LinkedList<Integer> List = new LinkedList<>();
+    //        LinkedList<Integer>List1 = new LinkedList<>();
+    //        List1.append(10);
+    //        List1.append(11);
+    //        List1.append(12);
+    //        LinkedList<Integer> List2 = new LinkedList<>();
+    //        List2.append(9);
+    //        List2.append(3);
+    //        List2.append(4);
+    //        List2.append(9);
+    //        List2.append(3);
+    //        List2.append(4);
+    //        System.out.println(List.zipLists(List1,List2));
+    // if one of the Lists are empty
+    @Test void TestzipListsEmptyList() {
+            LinkedList<Integer> List = new LinkedList<>();
+                LinkedList<Integer>List1 = new LinkedList<>();
+                List1.append(10);
+                List1.append(11);
+                List1.append(12);
+                //empty list
+                LinkedList<Integer> List2 = new LinkedList<>();
+        String expect ="{ 10 } -> { 11 } -> { 12 } -> NULL";
+        assertEquals(expect,List.zipLists(List1,List2).toString());
+    }
+    @Test void TestzipLists() {
+        LinkedList<Integer> List = new LinkedList<>();
+        LinkedList<Integer>List1 = new LinkedList<>();
+        List1.append(10);
+        List1.append(11);
+        List1.append(12);
+        LinkedList<Integer> List2 = new LinkedList<>();
+                List2.append(9);
+                List2.append(3);
+                List2.append(4);
+                List2.append(55);
+                List2.append(90);
+                List2.append(40);
+        String expect ="{ 10 } -> { 9 } -> { 11 } -> { 3 } -> { 12 } -> { 4 } -> { 55 } -> { 90 } -> { 40 } -> NULL";
+        assertEquals(expect,List.zipLists(List1,List2).toString());
     }
 }

@@ -28,6 +28,6 @@ public class Node <T>{
 
     @Override
     public String toString() {
-        return"value=" + value ;
+        return value +"" ;
     }
 }
