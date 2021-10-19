@@ -63,8 +63,9 @@ public class App {
         List2.append(55);
         List2.append(90);
         List2.append(40);
-        System.out.println(List.zipLists(List1,List2));
         System.out.println(List1.toString());
         System.out.println(List2.toString());
+        System.out.println(List.zipLists(List1,List2));
+
     }
 }
