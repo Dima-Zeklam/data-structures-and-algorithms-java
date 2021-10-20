@@ -66,6 +66,5 @@ public class App {
         System.out.println(List1.toString());
         System.out.println(List2.toString());
         System.out.println(List.zipLists(List1,List2));
-
     }
 }
