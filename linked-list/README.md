@@ -162,9 +162,9 @@ lists and return a reference to the head of the zipped list.
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-Use newlist and append the values inside it by using one  while loop to loop on the nodes in two list.
+Use newList and append the values inside it by using one  while loop to loop on the nodes in two list.
+**space -> O(n)**
 **Time -> O(n)**
-**Time -> O(1)**
 
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->

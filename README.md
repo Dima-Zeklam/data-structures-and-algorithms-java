@@ -8,4 +8,4 @@ insert Shift Array | [Binary Search](https://github.com/Dima-Zeklam/data-structu
 Linked List | [Linked List](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/blob/linked-list/linked-list/README.md)
 linked list insertions | [linked-list-insertions](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/blob/linked-list-insertions/linked-list/README.md)
 Linked list KthFromEnd |  [Linked list KthFromEnd ](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/blob/linked-list-kth/linked-list/README.md)
-Linked list ZipList |  [Linked list ZipList ](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/blob/linked-list-zip/README.md)
+Linked list ZipList |  [Linked list ZipList ](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/tree/linked-list-zip/linked-list#readme)
