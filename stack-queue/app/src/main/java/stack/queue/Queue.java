@@ -39,4 +39,12 @@ public class Queue <T> {
         return current.toString();
 
     }
+
+    @Override
+    public String toString() {
+        return "Queue{" +
+                "front=" + front +
+                ", rear=" + rear +
+                '}';
+    }
 }

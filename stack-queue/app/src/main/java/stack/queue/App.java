@@ -18,21 +18,20 @@ public class App {
         System.out.println(stack.pop());
         System.out.println(stack.pop());
         System.out.println(stack.toString());
-//        stack.push(10);
-//        stack.push(30);
-//        stack.push(45);
+        stack.push(10);
+        stack.push(30);
+        stack.push(45);
         System.out.println(stack.toString());
+
+
         Queue<Integer> queue = new Queue<>();
         queue.enqueue(3);
         System.out.println(queue.isEmpty());
         queue.enqueue(7);
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
         System.out.println(queue.isEmpty());
-        System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
-        queue.enqueue(11);
         System.out.println(queue.peek());
-//        System.out.println(stack.peek());
-//        System.out.println(stack.pop());
 
     }
 }
