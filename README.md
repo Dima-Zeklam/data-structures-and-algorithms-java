@@ -9,3 +9,4 @@ Linked List | [Linked List](https://github.com/Dima-Zeklam/data-structures-and-a
 linked list insertions | [linked-list-insertions](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/blob/linked-list-insertions/linked-list/README.md)
 Linked list KthFromEnd |  [Linked list KthFromEnd ](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/blob/linked-list-kth/linked-list/README.md)
 Linked list ZipList |  [Linked list ZipList ](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/tree/linked-list-zip/linked-list#readme)
+Stack and Queue |  [Stack and Queue](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/blob/stack-and-queue/stack-queue/README.md)
