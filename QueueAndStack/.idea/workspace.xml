@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2bed5cd-b935-49c5-937b-70d3b8a195c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../stack-queue/app/src/main/java/stack/queue/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../stack-queue/app/src/main/java/stack/queue/Queue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../stack-queue/app/src/main/java/stack/queue/Stack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../linked-list/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../linked-list/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +30,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testing" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../stack-queue" />
   </component>
   <component name="RunManager" selected="Gradle.AppTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -86,11 +82,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1634936117405</updated>
-      <workItem from="1634936118772" duration="1008000" />
+      <workItem from="1634936118772" duration="1009000" />
+      <workItem from="1634977755763" duration="52000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
