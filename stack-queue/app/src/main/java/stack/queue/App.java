@@ -8,7 +8,7 @@ public class App {
     public static void main(String[] args) {
 
 
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<Integer>();
         System.out.println(stack.isEmpty());
         stack.push(1);
         stack.push(2);
@@ -21,17 +21,30 @@ public class App {
         stack.push(10);
         stack.push(30);
         stack.push(45);
+        System.out.println(stack.pop());
         System.out.println(stack.toString());
 
 
-        Queue<Integer> queue = new Queue<>();
+        Queue<Integer> queue = new Queue<Integer>();
         queue.enqueue(3);
         System.out.println(queue.isEmpty());
         queue.enqueue(7);
+        queue.enqueue(8);
+        System.out.println(queue.toString());
         System.out.println(queue.dequeue());
         System.out.println(queue.dequeue());
+
         System.out.println(queue.isEmpty());
         System.out.println(queue.peek());
+        System.out.println("*****************");
+        PseudoQueue<Integer> pseudoQueue = new PseudoQueue<>();
+        pseudoQueue.PseudoEnqueue(5);// first in first out, will be the front
+        pseudoQueue.PseudoEnqueue(10);
+        pseudoQueue.PseudoEnqueue(20);// will be the rear
+        System.out.println(pseudoQueue.toString());
+
+        System.out.println(pseudoQueue.PseudoDequeue());// will delete front which is 5
+        System.out.println(pseudoQueue.toString()); // the front become 10
 
     }
 }
