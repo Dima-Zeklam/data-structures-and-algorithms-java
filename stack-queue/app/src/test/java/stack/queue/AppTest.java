@@ -163,6 +163,11 @@ class AppTest {
         String test = "PseudoQueue{stack2=Stack{top=10}}";
         assertEquals(test,pseudoQueue.toString());
     }
+    @Test void TestPseudoQueueDequeueFromEmptyStack() {
 
+        PseudoQueue<Integer> pseudoQueue = new PseudoQueue<>();
+        String test = "the stack is empty";
+        assertEquals(test,pseudoQueue.PseudoDequeue());
+    }
 
 }
