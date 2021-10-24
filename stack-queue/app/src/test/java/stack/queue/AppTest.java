@@ -11,7 +11,7 @@ class AppTest {
     //Can successfully push onto a stack
     @Test void TestPushOntoStack() {
 
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<Integer>();
         stack.push(8);
         String test = "8";
         assertEquals(test,stack.peek());
@@ -20,7 +20,7 @@ class AppTest {
     //Can successfully push multiple values onto a stack
     @Test void TestPushMultipleValOntoStack() {
 
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<Integer>();
         stack.push(8);
         stack.push(5);
         stack.push(97);
@@ -30,7 +30,7 @@ class AppTest {
     //Can successfully pop off the stack
     @Test void TesPopFromStack() {
 
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<Integer>();
         stack.push(8);
         stack.push(5);
         stack.push(97);
@@ -41,7 +41,7 @@ class AppTest {
     //Can successfully empty a stack after multiple pops
     @Test void TestPopMultipleValFromStack() {
 
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<Integer>();
         stack.push(8);
         stack.push(5);
         stack.push(97);
@@ -53,7 +53,7 @@ class AppTest {
     //Can successfully peek the next item on the stack
     @Test void TestPeekFromStack() {
 
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<Integer>();
         stack.push(8);
         stack.push(5);
         stack.push(97);
@@ -63,27 +63,27 @@ class AppTest {
     //Can successfully instantiate an empty stack
     @Test void TestInstantiateEmptyStack() {
 
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<Integer>();
         boolean test = true;
         assertEquals(test,stack.isEmpty());
     }
     //Calling pop or peek on empty stack raises exception
     @Test void TestCallPopOnEmptyStack() {
 
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<Integer>();
         String Exception = "the stack is empty";
         assertEquals(Exception,stack.pop());
     }
     @Test void TestCallPeekOnEmptyStack() {
 
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<Integer>();
         String Exception = "the stack is empty";
         assertEquals(Exception,stack.peek());
     }
     //Can successfully enqueue into a queue
     @Test void TestEnqueueOntoQueue() {
 
-        Queue<Integer> queue = new Queue<>();
+        Queue<Integer> queue = new Queue<Integer>();
         queue.enqueue(8);
         String test = "Queue{front=8, rear=8}";
         assertEquals(test,queue.toString());
@@ -91,7 +91,7 @@ class AppTest {
     //Can successfully enqueue multiple values into a queue
     @Test void TestEnqueueMultipleValOntoQueue() {
 
-        Queue<Integer> queue = new Queue<>();
+        Queue<Integer> queue = new Queue<Integer>();
         queue.enqueue(3);
         queue.enqueue(8);
         queue.enqueue(2);
@@ -101,7 +101,7 @@ class AppTest {
     //Can successfully dequeue out of a queue the expected value
     @Test void TestDequeueFromQueue() {
 
-        Queue<Integer> queue = new Queue<>();
+        Queue<Integer> queue = new Queue<Integer>();
         queue.enqueue(12);
         queue.enqueue(8);
         queue.enqueue(2);
@@ -112,7 +112,7 @@ class AppTest {
     //Can successfully peek into a queue, seeing the expected value
     @Test void TestPeekFromEmptyQueue() {
 
-        Queue<Integer> queue = new Queue<>();
+        Queue<Integer> queue = new Queue<Integer>();
 
         String Exception = "the Queue is empty";
         assertEquals(Exception,queue.peek());
@@ -120,14 +120,14 @@ class AppTest {
     //Calling dequeue or peek on empty queue raises exception
     @Test void TestDequeueFromEmptyQueue() {
 
-        Queue<Integer> queue = new Queue<>();
+        Queue<Integer> queue = new Queue<Integer>();
         String Exception = "the Queue is empty";
         assertEquals(Exception,queue.dequeue());
     }
     //Can successfully empty a queue after multiple dequeues
     @Test void TestDequeueToGetEmptyQueue() {
 
-        Queue<Integer> queue = new Queue<>();
+        Queue<Integer> queue = new Queue<Integer>();
         queue.enqueue(12);
         queue.enqueue(8);
         queue.enqueue(2);
@@ -140,9 +140,28 @@ class AppTest {
     //Can successfully instantiate an empty queue
     @Test void TestInstantiateEmptyQueue() {
 
-        Queue<Integer> queue = new Queue<>();
+        Queue<Integer> queue = new Queue<Integer>();
         boolean test = true;
         assertEquals(test,queue.isEmpty());
+    }
+    @Test void TestPseudoQueueEnqueue() {
+
+        PseudoQueue<Integer> pseudoQueue = new PseudoQueue<>();
+        pseudoQueue.PseudoEnqueue(5);// first in first out, will be the front
+        pseudoQueue.PseudoEnqueue(10);
+        pseudoQueue.PseudoEnqueue(20);// will be the rear
+      String test = "PseudoQueue{stack2=Stack{top=5}}";
+        assertEquals(test,pseudoQueue.toString());
+    }
+    @Test void TestPseudoQueueDequeue() {
+
+        PseudoQueue<Integer> pseudoQueue = new PseudoQueue<>();
+        pseudoQueue.PseudoEnqueue(5);// first in first out, will be the front
+        pseudoQueue.PseudoEnqueue(10);
+        pseudoQueue.PseudoEnqueue(20);// will be the rear
+        System.out.println(pseudoQueue.PseudoDequeue());// will delete front which is 5
+        String test = "PseudoQueue{stack2=Stack{top=10}}";
+        assertEquals(test,pseudoQueue.toString());
     }
 
 

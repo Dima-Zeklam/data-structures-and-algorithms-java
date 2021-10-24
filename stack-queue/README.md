@@ -31,3 +31,31 @@ For all the method in Stack and Queue take same time and space complexity which 
 * dequeue() - used to delete node from the queue and don't need to pass an arg. it checked if the stack is empty or not before conducting a Dequeue to ensure that an exception is not raised.
 * Peek() - function just returns the value of the Front element available in the queue. it checked if the queue is empty or not before conducting a peek to ensure that an exception is not raised.
 * isEmpty() - returns true when queue is empty otherwise returns false.
+
+## stack-queue-pseudo
+# Challenge Summary
+<!-- Description of the challenge -->
+Need a way to create enqueue and dequeue for a Queue using two Stacks.
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![pseudoQueue-whiteboard](pseudoQueue-whiteboard.png)
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Create two method enqueue and dequeue by using two stack .
+The complexity for enqueue  **time -> O(1) and Space -> O(1)**
+The complexity for dequeue **time -> O(1) and Space -> O(1)**
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+* pseudoEnqueue(value)
+   * Input	[10]->[15]->[20] 
+   * Args 5 
+   * Output [5]->[10]->[15]->[20]
+   * 
+* dequeue()
+   * Input	[5]->[10]->[15]->[20]
+   * Output [5]->[10]->[15]
+  
+
+
+	
+    	

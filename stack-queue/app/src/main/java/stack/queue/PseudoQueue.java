@@ -21,6 +21,7 @@ public class PseudoQueue <T>{
 
     }
     public String PseudoDequeue(){
+
         if(!stack1.isEmpty()){
             T data = (T) stack1.pop();
             stack2.push(data);
