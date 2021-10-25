@@ -170,4 +170,55 @@ class AppTest {
         assertEquals(test,pseudoQueue.PseudoDequeue());
     }
 
+    @Test void TestAnimalShelterDequeueFromEmptyQueue() {
+        AnimalShellter animalShellter = new AnimalShellter();
+           String test = "queue is empty";
+        String test2 = "queue is empty";
+        assertEquals(test,animalShellter.dequeueAnimal("cat"));
+        assertEquals(test2,animalShellter.dequeueAnimal("dog"));
+    }
+    @Test void TestAnimalShelterDequeueForHours() {
+        AnimalShellter animalShellter = new AnimalShellter();
+        String test = null;
+        assertEquals(test,animalShellter.dequeueAnimal("hours"));
+    }
+    @Test void TestAnimalShelterEnqueue() {
+                AnimalShellter animalShellter = new AnimalShellter();
+    Animal cat1 = new Cat("kitty");
+    Animal cat2 = new Cat("jeje");
+    Animal cat3 = new Cat("katy");
+    Animal dog1 = new Dog("jak");
+    Animal dog2 = new Dog("husky");
+    Animal dog3 = new Dog("polty");
+        System.out.println(animalShellter.dequeueAnimal("cat"));
+        animalShellter.enqueueAnimal(cat1);
+        animalShellter.enqueueAnimal(cat2);
+        animalShellter.enqueueAnimal(dog1);
+        animalShellter.enqueueAnimal(dog2);
+        animalShellter.enqueueAnimal(cat3);
+        animalShellter.enqueueAnimal(dog3);
+        String test = "AnimalShellter{animals=Queue{front=kitty, rear=polty}}";
+        assertEquals(test,animalShellter.toString());
+    }
+    @Test void TestAnimalShelterDequeue() {
+        AnimalShellter animalShellter = new AnimalShellter();
+        Animal cat1 = new Cat("kitty");
+        Animal cat2 = new Cat("jeje");
+        Animal cat3 = new Cat("katy");
+        Animal dog1 = new Dog("jak");
+        Animal dog2 = new Dog("husky");
+        Animal dog3 = new Dog("polty");
+        System.out.println(animalShellter.dequeueAnimal("cat"));
+        animalShellter.enqueueAnimal(cat1);
+        animalShellter.enqueueAnimal(cat2);
+        animalShellter.enqueueAnimal(dog1);
+        animalShellter.enqueueAnimal(dog2);
+        animalShellter.enqueueAnimal(cat3);
+        animalShellter.enqueueAnimal(dog3);
+        String test = "kitty";
+        assertEquals(test,animalShellter.dequeueAnimal("cat"));
+
+    }
+
+
 }

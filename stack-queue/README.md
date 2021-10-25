@@ -54,8 +54,33 @@ The complexity for dequeue **time -> O(1) and Space -> O(1)**
 * dequeue()
    * Input	[5]->[10]->[15]->[20]
    * Output [5]->[10]->[15]
-  
+
+# First-in, First out Animal Shelter.
+# Challenge Summary
+<!-- Description of the challenge -->
+Create a class called AnimalShelter which holds only dogs and cats.Implement enqueue and dequeue methods for dogs and cats
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+
+![AnimalShellter](AnimalShellter.png)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+The shelter operates using a first-in, first-out approach.
+**for enqueue method  Big O :  space -> O(1) , time -> O(1).**
+**for enqueue method  Big O :  space -> O(1) , time -> O(1).**
 
 
-	
-    	
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+##### enqueueAnimal(dog2)
+ input   	[dog1] -> [cat1] -> [cat2] -> 
+
+output     [dog2] ->  [dog1] -> [cat1] -> [cat2] -> 
+
+##### dequeueAnimal(dog2)
+input   	[dog2] ->  [dog1] -> [cat1] -> [cat2] ->
+
+output     [dog2] ->  [dog1] -> [cat1] -> 
+
