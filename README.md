@@ -11,3 +11,4 @@ Linked list KthFromEnd |  [Linked list KthFromEnd ](https://github.com/Dima-Zekl
 Linked list ZipList |  [Linked list ZipList ](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/tree/linked-list-zip/linked-list#readme)
 Stack and Queue |  [Stack and Queue](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/blob/stack-and-queue/stack-queue/README.md)
 stack-queue-pseudo | [stack-queue-pseudo](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/blob/main/stack-queue/README.md)
+First-in, First out Animal Shelter | [First-in, First out Animal Shelter](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/blob/stack-queue-animal-shelter/stack-queue/README.md)
