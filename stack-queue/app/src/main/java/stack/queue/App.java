@@ -3,6 +3,7 @@
  */
 package stack.queue;
 
+
 public class App {
 
     public static void main(String[] args) {
@@ -46,5 +47,24 @@ public class App {
         System.out.println(pseudoQueue.PseudoDequeue());// will delete front which is 5
         System.out.println(pseudoQueue.toString()); // the front become 10
 
+        System.out.println("*****************");
+        Animal cat1 = new Cat("kitty");
+        Animal cat2 = new Cat("jeje");
+        Animal cat3 = new Cat("katy");
+        Animal dog1 = new Dog("jak");
+        Animal dog2 = new Dog("husky");
+        Animal dog3 = new Dog("polty");
+      AnimalShellter animalShellter = new AnimalShellter();
+        System.out.println(animalShellter.dequeueAnimal("cat"));
+      animalShellter.enqueueAnimal(cat1);
+      animalShellter.enqueueAnimal(cat2);
+      animalShellter.enqueueAnimal(dog1);
+      animalShellter.enqueueAnimal(dog2);
+      animalShellter.enqueueAnimal(cat3);
+      animalShellter.enqueueAnimal(dog3);
+      System.out.println(animalShellter.toString());
+        System.out.println(animalShellter.dequeueAnimal("cat"));
+        System.out.println(animalShellter.dequeueAnimal("dog"));
+        System.out.println(animalShellter.toString());
     }
 }
