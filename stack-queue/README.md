@@ -84,3 +84,28 @@ input   	[dog2] ->  [dog1] -> [cat1] -> [cat2] ->
 
 output     [dog2] ->  [dog1] -> [cat1] -> 
 
+#  Validate Brackets 
+# Challenge Summary
+<!-- Description of the challenge -->
+Write a function called validateBrackets
+which takes one String argument and representing whether or not the brackets in the string are balanced.
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+
+![ValidateBrackets](ValidateBrackets.png)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Use Stack to reduce time complexity and space.
+**Method complexity :  space -> O(1) , time -> O(n)**
+
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+##### validateBrackets("(){}[[]]")
+* input -> (){}[[]]
+* output ->  true
+
+##### validateBrackets(")")
+* input -> )
+* output ->  false
