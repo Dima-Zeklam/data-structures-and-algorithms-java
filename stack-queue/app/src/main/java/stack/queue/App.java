@@ -66,5 +66,9 @@ public class App {
         System.out.println(animalShellter.dequeueAnimal("cat"));
         System.out.println(animalShellter.dequeueAnimal("dog"));
         System.out.println(animalShellter.toString());
+        ValidateBrackets bracket = new ValidateBrackets();
+        System.out.println( bracket.validateBrackets("{}{Code}[Fellows](())")); // return true
+        System.out.println( bracket.validateBrackets("[({}]")); // return false
+        System.out.println( bracket.validateBrackets("}")); // return false
     }
 }

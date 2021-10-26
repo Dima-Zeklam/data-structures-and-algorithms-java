@@ -219,6 +219,31 @@ class AppTest {
         assertEquals(test,animalShellter.dequeueAnimal("cat"));
 
     }
+    @Test void TestBrackets() {
+        ValidateBrackets bracket = new ValidateBrackets();
+
+        boolean testF = false;
+        boolean testT = true;
+        assertEquals(testT,bracket.validateBrackets("{}"));
+        assertEquals(testT,bracket.validateBrackets("{}(){}"));
+        assertEquals(testT,bracket.validateBrackets("()[[Extra Characters]]"));
+        assertEquals(testT,bracket.validateBrackets("{}{Code}[Fellows](())"));
+        assertEquals(testF,bracket.validateBrackets("[({}]"));
+        assertEquals(testF,bracket.validateBrackets("{(})"));
+        assertEquals(testF,bracket.validateBrackets("(]("));
+        assertEquals(testF,bracket.validateBrackets("(]"));
+        assertEquals(testF,bracket.validateBrackets("}"));
+        assertEquals(testF,bracket.validateBrackets("]"));
+        assertEquals(testF,bracket.validateBrackets(")"));
+
+
+    }
+    @Test void TestBracketsEmptyString() {
+        ValidateBrackets bracket = new ValidateBrackets();
+        boolean testF = false;
+        boolean testT = true;
+        assertEquals(testF,bracket.validateBrackets(" "));
+           }
 
 
 }
