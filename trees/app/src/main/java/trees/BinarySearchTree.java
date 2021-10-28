@@ -71,5 +71,13 @@ public class BinarySearchTree<T> extends BinaryTree {
 
         return false;
     }
+
+    @Override
+    public String toString() {
+        return "BinarySearchTree{" +
+                "root=" + root +
+                '}';
     }
+
+}
 

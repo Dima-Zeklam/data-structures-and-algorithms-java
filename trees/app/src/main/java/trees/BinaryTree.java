@@ -54,4 +54,10 @@ return tree;
         return false;
     }
 
+    @Override
+    public String toString() {
+        return "BinaryTree{" +
+                "root=" + root +
+                '}';
+    }
 }

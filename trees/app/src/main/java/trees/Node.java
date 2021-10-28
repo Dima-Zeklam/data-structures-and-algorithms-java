@@ -7,7 +7,7 @@ public class Node <T>{
     T data;
     Node left;
     Node right;
-//    ArrayList<Node> children;
+
 
     public Node(T data) {
         this.data = data;
