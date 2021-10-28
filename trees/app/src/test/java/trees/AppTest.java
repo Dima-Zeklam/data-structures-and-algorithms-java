@@ -4,11 +4,78 @@
 package trees;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+        //    Can successfully instantiate an empty tree
+    @Test void InstantiateEmptyTree() {
+        BinarySearchTree<Integer>tree = new BinarySearchTree<>();
+        String Expected = "BinarySearchTree{root=null}";
+        assertEquals(Expected,tree.toString());
+
     }
+    //    Can successfully instantiate a tree with a single root node
+    @Test void TreeWithSingleRootNode() {
+        BinarySearchTree<Integer>tree = new BinarySearchTree<>();
+        tree.add(10);
+        String Expected ="BinarySearchTree{root=Node{data=10, left=null, right=null}}";
+        assertEquals(Expected,tree.toString());
+
+    }
+    //    Can successfully add a left child and right child to a single root node
+    @Test void TreeWithLeftRightChild() {
+        BinarySearchTree<Integer>tree = new BinarySearchTree<>();
+        tree.add(10);
+        tree.add(5);
+        tree.add(15);
+        tree.add(3);
+        tree.add(7);
+        tree.add(22);
+        String Expected ="BinarySearchTree{root=Node{data=10, left=Node{data=5, left=Node{data=3, " +
+                "left=null, right=null}, right=Node{data=7, left=null, right=null}}," +
+                " right=Node{data=15, left=null, right=Node{data=22, left=null, right=null}}}}";
+        assertEquals(Expected,tree.toString());
+    }
+    //    Can successfully return a collection from a preorder traversal
+    @Test void TreeWithPreorderTraversal() {
+        BinarySearchTree<Integer>tree = new BinarySearchTree<>();
+        tree.add(10);
+        tree.add(5);
+        tree.add(15);
+        tree.add(3);
+        tree.add(7);
+        tree.add(22);
+      String Expected = "[10, 5, 3, 7, 15, 22]";
+        assertEquals(Expected,tree.preOrder(tree.root).toString());
+    }
+    //    Can successfully return a collection from an inorder traversal
+
+    @Test void TreeWithInorderTraversal() {
+        BinarySearchTree<Integer>tree = new BinarySearchTree<>();
+        tree.add(10);
+        tree.add(5);
+        tree.add(15);
+        tree.add(3);
+        tree.add(7);
+        tree.add(22);
+        String Expected = "[3, 5, 7, 10, 15, 22]";
+        assertEquals(Expected,tree.inOrder(tree.root).toString());
+    }
+    //    Can successfully return a collection from a postorder traversal
+    @Test void TreeWithPostorderTraversal() {
+        BinarySearchTree<Integer>tree = new BinarySearchTree<>();
+        tree.add(10);
+        tree.add(5);
+        tree.add(15);
+        tree.add(3);
+        tree.add(7);
+        tree.add(22);
+        String Expected = "[3, 7, 5, 22, 15, 10]";
+        assertEquals(Expected,tree.postOrder(tree.root).toString());
+    }
+
 }
