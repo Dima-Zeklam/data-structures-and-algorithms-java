@@ -4,6 +4,7 @@
 package stack.queue;
 
 
+
 public class App {
 
     public static void main(String[] args) {
@@ -70,5 +71,11 @@ public class App {
         System.out.println( bracket.validateBrackets("{}{Code}[Fellows](())")); // return true
         System.out.println( bracket.validateBrackets("[({}]")); // return false
         System.out.println( bracket.validateBrackets("}")); // return false
+        Stack<Integer> stack5 = new Stack<Integer>();
+        stack5.push(6);
+       stack5.push(7);
+        stack5.push(8);
+        System.out.println(stack5.getMax());
     }
+
 }

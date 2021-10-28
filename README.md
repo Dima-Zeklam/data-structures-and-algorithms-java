@@ -13,3 +13,4 @@ Stack and Queue |  [Stack and Queue](https://github.com/Dima-Zeklam/data-structu
 stack-queue-pseudo | [stack-queue-pseudo](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/blob/main/stack-queue/README.md)
 First-in, First out Animal Shelter | [First-in, First out Animal Shelter](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/blob/stack-queue-animal-shelter/stack-queue/README.md)
 stack-queue-brackets | [stack-queue-brackets](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/blob/stack-queue-brackets/stack-queue/README.md)
+trees | [trees](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/blob/main/trees/README.md)
