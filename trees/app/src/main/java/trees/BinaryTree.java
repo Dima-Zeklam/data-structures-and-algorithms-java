@@ -60,4 +60,27 @@ return tree;
                 "root=" + root +
                 '}';
     }
+
+    public Node getRoot() {
+        return root;
+    }
+
+    public int treeMax(){
+        if(root == null){
+            return 0;
+        }
+        ArrayList<T> arr = preOrder(root);
+
+        int max =0 ;
+        for(int i=0 ;i<arr.size();i++) {
+            if ((Integer) arr.get(i) > max) {
+                max = (Integer) arr.get(i);
+            }
+        }
+            return max;
+        }
+
+
+
+
 }

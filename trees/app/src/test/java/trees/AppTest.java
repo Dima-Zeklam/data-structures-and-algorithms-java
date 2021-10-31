@@ -77,5 +77,20 @@ class AppTest {
         String Expected = "[3, 7, 5, 22, 15, 10]";
         assertEquals(Expected,tree.postOrder(tree.root).toString());
     }
-
+    @Test void EmptyTreeMaxTest() {
+        BinarySearchTree<Integer>tree = new BinarySearchTree<>();
+        int Expected = 0;
+        assertEquals(Expected,tree.treeMax());
+    }
+    @Test void TreeMaxTest() {
+        BinarySearchTree<Integer>tree = new BinarySearchTree<>();
+        tree.add(10);
+        tree.add(5);
+        tree.add(15);
+        tree.add(30);
+        tree.add(7);
+        tree.add(22);
+        int Expected =30;
+        assertEquals(Expected,tree.treeMax());
+    }
 }
