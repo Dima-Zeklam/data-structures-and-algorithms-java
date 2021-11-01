@@ -6,6 +6,7 @@ package trees;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -93,4 +94,16 @@ class AppTest {
         int Expected =30;
         assertEquals(Expected,tree.treeMax());
     }
+    @Test void BreadthFirst() {
+        BinarySearchTree<Integer>tree = new BinarySearchTree<>();
+        tree.add(10);
+        tree.add(5);
+        tree.add(15);
+        tree.add(30);
+        tree.add(7);
+        tree.add(22);
+        String Expected ="[10, 5, 15, 7, 30, 22]";
+        assertEquals(Expected,tree.breadthFirst(tree).toString());
+    }
+
 }

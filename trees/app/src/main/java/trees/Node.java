@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Node <T>{
 
     T data;
-    Node left;
-    Node right;
+    Node<T> left;
+    Node<T>right;
 
 
     public Node(T data) {
@@ -45,4 +45,5 @@ public class Node <T>{
                 ", right=" + right +
                 '}';
     }
+
 }

@@ -1,3 +1,4 @@
+
 # Trees
 <!-- Short summary or background information -->
 * Trees are Data structures used to store and organize data.
@@ -51,3 +52,38 @@ Space -> O(n) - because that i use an ArrayList
 <!-- Show how to run your code, and examples of it in action -->
 * Binary tree have the following nodes : [10, 5, 7, 9, 30, 11]
 * Output -> tree.treeMax() -> 30
+
+# tree-breadth-first
+
+# Challenge Summary
+<!-- Description of the challenge -->
+Write a function called breadth first have tree arguments and return list of all values in the tree, in the order they were encountered
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![breathTree](breathTree.png)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Big O:
+Time Complexity: O(n) I use while loop , where n is the number of nodes in the binary tree 
+Space Complexity: O(n) -> because i use new List and new queue O(2n)->O(n)
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+
+```
+BinarySearchTree<Integer>tree = new BinarySearchTree<>();
+tree.add(10);
+tree.add(5);
+tree.add(15);
+tree.add(30);
+tree.add(7);
+tree.add(22);
+tree.breadthFirst(tree) -> [10, 5, 15, 7, 30, 22]
+
+```
+
+Example: 
+* input ->tree  
+![tree](tree.png)
+
+* Output -> [2,7,5,2,6,9,5,11,4]
