@@ -16,11 +16,13 @@ add method have value as arg and return nothing and Contains have value as arg a
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 Big O for the methods :
-* preOrder: time -> O(1), Space ->O(n) 
-* inOrder: time -> O(1), Space ->O(n)
-* postOrder: time -> O(1), Space ->O(n)
-* add : time -> O(n), Space ->O(1)
-* contains:  time -> O(n), Space ->O(1)
+
+* preOrder: time -> O(n) because traverse each node once,the amount of work for each node is constant(c) (does not depend on the rest of the nodes), Space ->O(n) use an ArrayList
+* inOrder: time -> O(n) because traverse each node once, the amount of work for each node is constant(c) (does not depend on the rest of the nodes) , Space ->O(n) use an ArrayList 
+* postOrder: time -> O(n) because traverse each node once, the amount of work for each node is constant(c) (does not depend on the rest of the nodes), Space ->O(n) use an ArrayList
+
+* add : time -> O(n) because I used while loop  , Space ->O(1) constant(c)
+* contains:  time -> O(n) because I used while loop , Space ->O(1) constant(c)
 ## API
 <!-- Description of each method publicly available in each of your trees -->
 * Methods for depth first traversal:
