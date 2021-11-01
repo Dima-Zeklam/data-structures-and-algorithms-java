@@ -43,8 +43,8 @@ Write a method called treeMax that returns the max number in the tree.
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 #### I used an ArrayList to hold the nodes and get the max number.
 Big O:
-time -> O(n)
-Space -> O(n)
+time -> O(n) - because of using the for loop witch need n times to loop,(n) represent the number of times the loop is to be executed.
+Space -> O(n) - because that i use an ArrayList 
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
 * Binary tree have the following nodes : [10, 5, 7, 9, 30, 11]
