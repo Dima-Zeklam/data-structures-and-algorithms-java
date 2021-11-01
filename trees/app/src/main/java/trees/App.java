@@ -19,5 +19,6 @@ public class App {
         System.out.println(tree.inOrder(tree.root));
         System.out.println(tree.postOrder(tree.root));
         System.out.println("The max number in the tree is: " + tree.treeMax());
+        System.out.println(tree.breadthFirst(tree));
     }
 }
