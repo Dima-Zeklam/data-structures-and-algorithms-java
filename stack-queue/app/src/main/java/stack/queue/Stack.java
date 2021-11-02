@@ -39,22 +39,6 @@ public class Stack<T> {
         return top;
     }
 
-    public T getMax(){
-        if (isEmpty()){
-            System.out.println("the list is empty");
-            return null;
-        }
-        Node num= top;
-        Node max= top;
-        while (num.getNext()!=null){
-            if ((Integer)num.getValue()< Integer.parseInt(num.getNext().getValue()+"")){
-                max= num.getNext();
-            }
-            num= num.getNext();
-        }
-        return (T) max.getValue();
-    }
-
     public T getData() {
         return data;
     }

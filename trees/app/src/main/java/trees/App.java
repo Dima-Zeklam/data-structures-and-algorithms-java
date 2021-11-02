@@ -3,6 +3,8 @@
  */
 package trees;
 
+import trees.KaryTree.KaryTree;
+
 public class App {
 
     public static void main(String[] args) {
@@ -20,5 +22,17 @@ public class App {
         System.out.println(tree.postOrder(tree.root));
         System.out.println("The max number in the tree is: " + tree.treeMax());
         System.out.println(tree.breadthFirst(tree));
+        System.out.println("-----------------------------------------");
+        KaryTree<Integer> karyTree = new KaryTree<Integer>(3);
+        karyTree.add(9);
+        karyTree.add(30);
+        karyTree.add(3);
+        karyTree.add(5);
+        karyTree.add(15);
+        karyTree.add(6);
+        karyTree.add(2);
+        System.out.println(karyTree.toString());
+        System.out.println(karyTree.fizzBuzzTree(karyTree));
+
     }
 }

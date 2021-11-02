@@ -4,6 +4,7 @@
 package trees;
 
 import org.junit.jupiter.api.Test;
+import trees.KaryTree.KaryTree;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -104,6 +105,24 @@ class AppTest {
         tree.add(22);
         String Expected ="[10, 5, 15, 7, 30, 22]";
         assertEquals(Expected,tree.breadthFirst(tree).toString());
+    }
+    @Test void FuzzBuzzTreeTest() {
+                KaryTree<Integer> karyTree = new KaryTree<Integer>(3);
+                karyTree.add(9);
+                karyTree.add(30);
+                karyTree.add(3);
+                karyTree.add(5);
+                karyTree.add(15);
+                karyTree.add(6);
+                karyTree.add(2);
+                //[ 9, 30, 15, 6, 2, 3, 5]
+        String Expected ="[ Fizz, FizzBuzz, FizzBuzz, Fizz, 2, Fizz, Buzz]";
+        assertEquals(Expected,karyTree.fizzBuzzTree(karyTree).toString());
+    }
+    @Test void FuzzBuzzEmptyTreeTest() {
+        KaryTree<Integer> karyTree = new KaryTree<Integer>(3);
+        String Expected ="[null]";
+        assertEquals(Expected,karyTree.fizzBuzzTree(karyTree).toString());
     }
 
 }
