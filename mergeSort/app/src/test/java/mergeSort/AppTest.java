@@ -4,11 +4,22 @@
 package mergeSort;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    @Test void TestMergesort() {
+        App app = new App();
+        int [] arr = {20,18,12,8,5,-2};
+
+    assertEquals("[-2, 5, 8, 12, 18, 20]",Arrays.toString(app.Mergesort(arr)));
+    }
+    @Test void TestMergesortEmptyArray() {
+        App app = new App();
+        int [] arr = {};
+
+        assertEquals("[]",Arrays.toString(app.Mergesort(arr)));
     }
 }
