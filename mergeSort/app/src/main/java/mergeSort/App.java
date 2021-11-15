@@ -3,12 +3,69 @@
  */
 package mergeSort;
 
+import java.util.Arrays;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
+
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+//      int [] arr = {8,4,23,42,16,15};
+        int [] arr = {20,18,12,8,5,-2};
+//        int [] arr = {5,1};
+        System.out.println(Arrays.toString(Mergesort(arr))); // [-2, 5, 8, 12, 18, 20]
+    }
+
+    public static int[] Mergesort(int[] arr) {
+        int n = arr.length;
+        if (n > 1) {
+            int mid = n / 2;
+            int left[] = new int[mid];
+            int right[] = new int[n - mid];
+
+            for (int i = 0; i < mid; i++)
+                left[i] = arr[i];
+            for (int j = 0; j < (n - mid); j++)
+                right[j] = arr[mid + j];
+
+            Mergesort(left);
+            Mergesort(right);
+            merge(left, right, arr);
+        }
+        return arr;
+    }
+    public static void merge ( int[] left, int[] right, int[] arr ){
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        while(i < left.length && j < right.length) {
+            if (left[i] <= right[j]) {
+                arr[k] = left[i];
+                i += 1;
+            } else {
+                arr[k] = right[j];
+                j = j + 1;
+
+            }
+            k = k + 1;
+        }
+        if (i == left.length){
+
+            for (int remaining = k; remaining < arr.length; remaining++) {
+                arr[remaining] = right[j];
+                j++;
+            }
+        } else {
+            for (int remaining = k; remaining < arr.length; remaining++) {
+
+                arr[remaining] = left[i];
+                i++;
+            }
+        }
+
+
     }
 }
