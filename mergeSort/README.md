@@ -1,8 +1,6 @@
 # Challenge Summary
 <!-- Description of the challenge -->
-Write a function called Mergesort take an array and return sorted array from the smallest to largest number.
-input < -  Array
-output <- sorted array
+Write a function called Mergesort take an array and return sorted array from the smallest to the largest number.
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
 ![Whiteboard_MergeSort](Whiteboard_MergeSort.png)
