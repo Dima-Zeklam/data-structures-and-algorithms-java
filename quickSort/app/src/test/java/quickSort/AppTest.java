@@ -4,11 +4,23 @@
 package quickSort;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    @Test void TestQuickSort() {
+        App app = new App();
+        int [] arr = {8,4,23,42,16,15};
+         int n= arr.length;
+        assertEquals("[4, 8, 15, 16, 23, 42]", Arrays.toString(app.QuickSort(arr,0,n-1)));
+    }
+    @Test void TestQuickSortEmptyArray() {
+        App app = new App();
+        int [] arr = {};
+        int n= arr.length;
+        assertEquals("[]",Arrays.toString(app.QuickSort(arr,0,n-1)));
     }
 }
+
