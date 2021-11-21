@@ -10,5 +10,15 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+        HashTable<String,String> hashTable = new HashTable<>();
+        hashTable.add("FirstName","Dima");
+        hashTable.add("LastName","Zeklam");
+        System.out.println(hashTable.get("FirstName"));
+        System.out.println(hashTable.contains("age"));
+        System.out.println(hashTable.hash("LastName"));
+
+
     }
+
+
 }
