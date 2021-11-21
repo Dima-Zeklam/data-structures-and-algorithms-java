@@ -7,8 +7,60 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+    //Adding a key/value to your hashtable results in the value being in the data structure
+    @Test void TestAddToHashTable() {
+        HashTable<String,String> hashTable = new HashTable<>();
+        hashTable.add("FirstName","Dima");
+        hashTable.add("LastName","Zeklam");
+        assertEquals(false,hashTable.isEmpty());
     }
+    //Retrieving based on a key returns the value stored
+    @Test void TestGetToHashTable() {
+        HashTable<String,String> hashTable = new HashTable<>();
+        hashTable.add("FirstName","Dima");
+        hashTable.add("LastName","Zeklam");
+        assertEquals("Dima",hashTable.get("FirstName"));
+    }
+    //Successfully returns null for a key that does not exist in the hashtable
+    @Test void TestGetNullFromHashTable() {
+
+        HashTable<String,String> hashTable = new HashTable<>();
+        hashTable.add("FirstName","Dima");
+        hashTable.add("LastName","Zeklam");
+        assertEquals(null,hashTable.get("Age"));
+    }
+    //Successfully handle a collision within the hashtable
+    @Test void  testHashTableHandleNoCollision(){
+        HashTable<String,Integer> hashTable = new HashTable<>();
+        hashTable.add("Java",1);
+        hashTable.add("C++",2);
+        hashTable.add("JS",3);
+
+        assertEquals(1,hashTable.get("Java"));
+        assertEquals(2,hashTable.get("C++"));
+        assertEquals(3,hashTable.get("JS"));
+
+    }
+    //Successfully retrieve a value from a bucket within the hashtable that has a collision
+    @Test void  testHashTableHandleWithCollision(){
+        HashTable<String,Integer> hashTable = new HashTable<>();
+        hashTable.add("Java",1);
+        hashTable.add("Python",98);
+        hashTable.add("Css",99);
+        hashTable.add("C++",2);
+        hashTable.add("JS",3);
+
+        assertEquals(98,hashTable.get("Python"));
+
+    }
+    //Successfully hash a key to an in-range
+    @Test void TestHashFromHashTable() {
+
+        HashTable<String,String> hashTable = new HashTable<>();
+        hashTable.add("FirstName","Dima");
+        hashTable.add("LastName","Zeklam");
+        assertEquals(3,hashTable.hash("FirstName"));
+    }
+
 }
