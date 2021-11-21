@@ -1,6 +1,7 @@
 package hashtable;
 
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Objects;
 
 public class HashTable<K,V> {
@@ -124,6 +125,21 @@ public V contains(K key)
 
     return null;
 }
+    public String repeatedWord(String string){
 
+     HashTable<String,Integer> hashTable = new HashTable<String,Integer>();
+     String[] statment = string.toLowerCase().split(" ");
+for(String word:statment){
+    if (word.contains(",") || word.contains(".") ||word.contains(":")) {
+        word = word.substring(0, word.length() - 1);}
+    int count = hashTable.get(word) != null ? hashTable.get(word) : 0;
+    if (count ==1) {
+        return word;
+    }
+    hashTable.add(word, count + 1);
+}
+
+        return "There is no any duplicated word";
+    }
 
 }

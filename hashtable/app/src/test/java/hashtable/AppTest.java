@@ -63,4 +63,14 @@ class AppTest {
         assertEquals(3,hashTable.hash("FirstName"));
     }
 
+    @Test void TestRepeatWord() {
+        HashTable hashTable = new HashTable();
+       String statment ="Once upon a time, there was a brave princess who...";
+        assertEquals("a",hashTable.repeatedWord(statment));
+    }
+    @Test void TestRepeatWordWithEmptyString() {
+        HashTable hashTable = new HashTable();
+        String statment =" ";
+        assertEquals("There is no any duplicated word",hashTable.repeatedWord(statment));
+    }
 }

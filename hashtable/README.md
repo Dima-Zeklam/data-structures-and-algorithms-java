@@ -31,3 +31,20 @@
 * contains() method contain Arguments key and returns Boolean, indicating if the key exists in the table already.
 * hash() method contain Arguments key and returns Index in the collection for that key.
 * isEmpty() to check if the array is empty or not,Return Boolean 
+
+# hashmap-repeated-word
+# Challenge Summary
+<!-- Description of the challenge -->
+Write a function called repeated word that finds the first word to occur more than once in a string.
+Input : string, output: string
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![repeteWord](whitBoard_repeatWord.jpg)
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+The Time complexity -> O(n) because I used for loop
+The Space complexity -> O(n) because declare a new hash table.
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+* **Input:**  -> "Once upon a time, there was a brave princess who..."
+*  **Output:** -> "a"
