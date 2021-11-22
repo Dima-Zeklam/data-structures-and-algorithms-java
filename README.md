@@ -18,3 +18,4 @@ insertion Sort | [insertion Sort](https://github.com/Dima-Zeklam/data-structures
 Merge sort | [Merge sort](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/blob/merge_sort/mergeSort/README.md)
 Quick Sort | [Quick Sort](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/blob/quick_sort/quickSort/README.md)
 Hash Table |[Hash Table](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/blob/hashtable/hashtable/README.md)
+tree_intersection | [tree_intersection](https://github.com/Dima-Zeklam/data-structures-and-algorithms-java/blob/tree_intersection/TreeIntersection/README.md)
