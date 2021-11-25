@@ -8,7 +8,21 @@ public class App {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         System.out.println(new App().getGreeting());
+        Graph<String> graph = new Graph();
+    graph.addNode("A");
+    graph.addNode("B");
+    graph.addNode("C");
+
+
+    graph.addEdge("A", "B");
+    graph.addEdge("A", "C");
+    graph.addEdge("c", "B");
+
+    System.out.println(graph.size());
+    System.out.println(graph.getNeighbors("A"));//B ,C
+        System.out.println(graph.getNodes());// [A, B, C]
+
     }
 }
