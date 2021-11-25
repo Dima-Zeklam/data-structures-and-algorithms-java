@@ -29,5 +29,8 @@ public class Node <T>{
         this.neighbors = neighbors;
     }
 
-
+    @Override
+    public String toString() {
+        return value+"" ;
+    }
 }

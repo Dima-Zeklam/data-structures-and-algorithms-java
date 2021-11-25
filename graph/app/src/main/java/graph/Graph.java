@@ -18,7 +18,7 @@ public class Graph <T> {
         if (isNodeExist(value)){
             index = adjacencyMap.get(value);
         } else {
-            adjacencyMap.put(value, size);
+            adjacencyMap.put(value, size());
             Node newNode = new Node(value);
             vertices.add(newNode);
             index = size;
@@ -31,7 +31,7 @@ public class Graph <T> {
 //    add edge //    Arguments: 2 nodes to be connected by the edge, weight (optional) //    Returns: nothing
 //    Adds a new edge between two nodes in the graph //    If specified, assign a weight to the edge
 //    Both nodes should already be in the Graph
-    public void addEdge(T fromValue,T destinationValue)  {
+    public void addEdge(T fromValue,T destinationValue, int weight)  {
 
         //   check if Both nodes already be in the Graph
         if( isNodeExist(fromValue) && isNodeExist(destinationValue)) {
@@ -41,12 +41,11 @@ public class Graph <T> {
             Node nodeOne = vertices.get(FirstIndex);
             Node nodeTwo = vertices.get(SecIndex);
       // Add Neighbor
-            Neighbor neighborNodeOne = new Neighbor(nodeTwo);
-            Neighbor neighborNodeTwo = new Neighbor(nodeOne);
+            Neighbor neighborNodeOne = new Neighbor(nodeTwo,weight);
+            Neighbor neighborNodeTwo = new Neighbor(nodeOne,weight);
             nodeOne.addNeighbor(neighborNodeOne);
             nodeTwo.addNeighbor(neighborNodeTwo);
-        }else
-            System.out.println("No nodes");
+        }
 
     }
 
@@ -57,16 +56,16 @@ public class Graph <T> {
     public Set<T> getNodes(){
         return adjacencyMap.keySet();
     }
+
 //    get neighbors //    Arguments: node //    Returns a collection of edges connected to the given node
 public ArrayList<Neighbor> getNeighbors(T value ) {
     if (isNodeExist(value)){
-        System.out.println("Worked");
         int index = adjacencyMap.get(value);
         Node current = vertices.get(index);
         return current.getNeighbors();
 
     }
-        System.out.println("not found");
+     System.out.println("Node not found");
      return null;
 
 }
@@ -80,6 +79,14 @@ public ArrayList<Neighbor> getNeighbors(T value ) {
         return this.size ==0;
     }
 
-
+    @Override
+    public String toString() {
+        if(vertices.isEmpty()){
+            return null;
+        }else
+        return "Graph{" +
+                "vertices=" + vertices +
+                '}';
+    }
 }
 

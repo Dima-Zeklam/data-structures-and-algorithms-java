@@ -36,7 +36,10 @@ public class Neighbor {
         StringBuilder out = new StringBuilder();
         out.append(" ( ");
         out.append(node.getValue());
+        out.append(" , ");
+        out.append(weight);
         out.append(" ) ");
+
         return out.toString();
     }
 }

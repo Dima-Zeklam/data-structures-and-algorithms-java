@@ -11,18 +11,19 @@ public class App {
     public static void main(String[] args)  {
         System.out.println(new App().getGreeting());
         Graph<String> graph = new Graph();
-    graph.addNode("A");
-    graph.addNode("B");
-    graph.addNode("C");
+        System.out.println(graph.addNode("A"));
+        System.out.println(graph.addNode("B"));
+        System.out.println( graph.addNode("C"));
 
 
-    graph.addEdge("A", "B");
-    graph.addEdge("A", "C");
-    graph.addEdge("c", "B");
+    graph.addEdge("A", "B",1);
+    graph.addEdge("A", "C",3);
+    graph.addEdge("c", "B",2);
 
+    System.out.println(graph.toString());
     System.out.println(graph.size());
     System.out.println(graph.getNeighbors("A"));//B ,C
-        System.out.println(graph.getNodes());// [A, B, C]
+    System.out.println(graph.getNodes());// [A, B, C]
 
     }
 }

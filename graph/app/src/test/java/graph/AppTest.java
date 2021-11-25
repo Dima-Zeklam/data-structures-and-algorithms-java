@@ -7,8 +7,58 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+    //Node can be successfully added to the graph
+    @Test void TestAddNodeToGraph() {
+        Graph<String> graph = new Graph();
+        assertEquals("A", graph.addNode("A").toString());
+    }
+
+
+    //A collection of all nodes can be properly retrieved from the graph
+    @Test void TestGetNodesFromGraph() {
+       Graph<String> graph = new Graph();
+       graph.addNode("A");
+       graph.addNode("B");
+       graph.addNode("C");
+       assertEquals("[A, B, C]", graph.getNodes().toString());
+    }
+    //An edge can be successfully added to the graph
+    //All appropriate neighbors can be retrieved from the graph
+    // Neighbors are returned with the weight between nodes included
+    @Test void TestGetNeighborsInGraph() {
+        Graph<String> graph = new Graph();
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addEdge("A", "B",1);
+        graph.addEdge("A", "C",3);
+        graph.addEdge("c", "B",2);
+        assertEquals("[ ( B , 1 ) ,  ( C , 3 ) ]", graph.getNeighbors("A").toString());
+    }
+
+
+    //The proper size is returned, representing the number of nodes in the graph
+    @Test void TestSizeInGraph() {
+        Graph<String> graph = new Graph();
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+
+        assertEquals(3, graph.size());
+    }
+    //A graph with only one node and edge can be properly returned
+    @Test void TestOneNodeInGraph() {
+        Graph<String> graph = new Graph();
+       String node =  graph.addNode("A").toString();
+        graph.addEdge("A", "B",1);
+        assertEquals("A",node);
+        assertEquals(1, graph.size());
+    }
+    //An empty graph properly returns null
+    @Test void TestEmptyGraph() {
+        Graph<String> graph = new Graph();
+
+        assertEquals(null, graph.toString());
     }
 }
