@@ -28,6 +28,12 @@ public class App {
         Hash2.add("guide", "follow");
         Hash2.add("flow", "jam");
         ArrayList<ArrayList<String>> list =Hash1.leftJoin(Hash1,Hash2);
+        HashTable<Character, Integer> Hashtable = new HashTable<>();
         System.out.println(list);
+        String str = "The quick brown fox jumps over the lazy dog";
+        String str2 = "I love catsi";
+        String s="";
+        System.out.println(Hashtable.isUnique(str2));
+        System.out.println(Hashtable.repeatedWord("No. Try not. Do or do not. There is no try."));
     }
 }

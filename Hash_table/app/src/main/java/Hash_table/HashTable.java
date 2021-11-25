@@ -1,6 +1,8 @@
 package Hash_table;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Locale;
 import java.util.Objects;
 
 public class HashTable<K,V> {
@@ -142,6 +144,21 @@ public class HashTable<K,V> {
         }
         return list;
     }
+    public boolean isUnique(String str)
+    {
+        HashTable<Character,Integer> charCount = new HashTable<>();
+        for(Character ch: str.toLowerCase().toCharArray())
+        {
+            System.out.println(ch);
+            if(charCount.contains(ch) && ch != ' ')
+            {
 
+                return false;
+            }
+            else
+                charCount.add(ch,1);
+        }
+        return true;
+    }
     }
 
