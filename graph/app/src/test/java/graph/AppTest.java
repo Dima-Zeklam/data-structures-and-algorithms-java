@@ -61,4 +61,21 @@ class AppTest {
 
         assertEquals(null, graph.toString());
     }
+//    Graph<String> graph1 = new Graph();
+//        graph1.addNode("Pandora");
+//        graph1.addNode("Arendelle");
+//        graph1.addNode("Metroville");
+//        graph1.addNode("Monstroplolis");
+//        graph1.addNode("Narnia");
+//        graph1.addNode("Naboo");
+//
+//        graph1.addEdge("Pandora", "Arendelle",0);
+//        graph1.addEdge("Arendelle", "Metroville",0);
+//        graph1.addEdge("Arendelle", "Monstroplolis",0);
+//        graph1.addEdge("Metroville", "Monstroplolis",0);
+//        graph1.addEdge("Metroville", "Narnia",0);
+//        graph1.addEdge("Metroville", "Naboo",0);
+//        graph1.addEdge("Monstroplolis", "Naboo",0);
+//        graph1.addEdge("Naboo", "Narnia",0);
+//        System.out.println( graph1.BreadthFirst("Pandora"));//[Pandora, Arendelle, Metroville, Monst
 }

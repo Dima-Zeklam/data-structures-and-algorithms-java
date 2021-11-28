@@ -41,3 +41,22 @@ Implement Graph that represented as an adjacency list, and should include the fo
 3. getNodes method : Accept none and Return  all the nodes in the graph as a Set collection.
 4. size method : Accept none and Return the total number of nodes in the graph.
 
+# Challenge Summary
+<!-- Description of the challenge -->
+Write a function called BreadthFirst for the Graph that accept Node and Return a List.
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![breadthFirstGraph](breadthFirstGraph.png)
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Big O
+Time Complixity -> O(n^2) because of using nested loop
+Space Complixity -> O(n) because of initialize new Arraylist 
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+
+* Input: graph.BreadthFirst("Pandora")
+![graph](input.png)
+
+* Output :[Pandora, Arendelle, Metroville, Monstroplolis, Narnia, Naboo]

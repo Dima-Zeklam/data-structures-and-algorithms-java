@@ -88,5 +88,58 @@ public ArrayList<Neighbor> getNeighbors(T value ) {
                 "vertices=" + vertices +
                 '}';
     }
+    //ALGORITHM BreadthFirst(vertex)
+    //    DECLARE nodes <-- new List()
+    //    DECLARE breadth <-- new Queue()
+    //    DECLARE visited <-- new Set()
+    //
+    //    breadth.Enqueue(vertex)
+    //    visited.Add(vertex)
+    //
+    //    while (breadth is not empty)
+    //        DECLARE front <-- breadth.Dequeue()
+    //        nodes.Add(front)
+    //
+    //        for each child in front.Children
+    //            if(child is not visited)
+    //                visited.Add(child)
+    //                breadth.Enqueue(child)
+    //
+    //    return nodes;
+
+
+    public ArrayList<String> BreadthFirst(T vertex) {
+        if(vertex == null ){
+            return null;
+        }
+        ArrayList<String> nodes = new ArrayList<>();
+        Queue<Node> breadth = new LinkedList<>();
+        Set<T> visited = new HashSet<>();
+        int index = adjacencyMap.get(vertex);
+        Node rootNode = vertices.get(index);
+        if(rootNode == null){
+            return null;
+        }
+
+        breadth.add(rootNode);
+        visited.add((T)rootNode.getValue());
+        while (!breadth.isEmpty()) {
+            Node node = breadth.poll();
+            nodes.add(node.getValue().toString());
+            ArrayList<Neighbor> neighbors = node.getNeighbors();
+            Iterator<Neighbor> child = neighbors.iterator();
+
+            while(child.hasNext()){
+                Node childNode = child.next().getNode();
+                if(visited.contains(childNode.getValue())){
+                    continue;
+                }
+                visited.add((T)childNode.getValue());
+                breadth.add(childNode);
+            }
+        }
+        return nodes;
+    }
+
 }
 

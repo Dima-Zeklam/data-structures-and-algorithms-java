@@ -3,6 +3,8 @@
  */
 package graph;
 
+import java.util.List;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -11,10 +13,27 @@ public class App {
     public static void main(String[] args)  {
         System.out.println(new App().getGreeting());
         Graph<String> graph = new Graph();
+
+
         System.out.println(graph.addNode("A"));
         System.out.println(graph.addNode("B"));
         System.out.println( graph.addNode("C"));
+        Graph<String> graph1 = new Graph();
+        graph1.addNode("Pandora");
+        graph1.addNode("Arendelle");
+        graph1.addNode("Metroville");
+        graph1.addNode("Monstroplolis");
+        graph1.addNode("Narnia");
+        graph1.addNode("Naboo");
 
+        graph1.addEdge("Pandora", "Arendelle",0);
+        graph1.addEdge("Arendelle", "Metroville",0);
+        graph1.addEdge("Arendelle", "Monstroplolis",0);
+        graph1.addEdge("Metroville", "Monstroplolis",0);
+        graph1.addEdge("Metroville", "Narnia",0);
+        graph1.addEdge("Metroville", "Naboo",0);
+        graph1.addEdge("Monstroplolis", "Naboo",0);
+        graph1.addEdge("Naboo", "Narnia",0);
 
     graph.addEdge("A", "B",1);
     graph.addEdge("A", "C",3);
@@ -24,6 +43,7 @@ public class App {
     System.out.println(graph.size());
     System.out.println(graph.getNeighbors("A"));//B ,C
     System.out.println(graph.getNodes());// [A, B, C]
+    System.out.println( graph1.BreadthFirst("Pandora"));//Pandora, Arendelle, Metroville, Monstroplolis, Narnia, Naboo
 
     }
 }
