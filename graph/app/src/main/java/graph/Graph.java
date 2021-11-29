@@ -141,5 +141,31 @@ public ArrayList<Neighbor> getNeighbors(T value ) {
         return nodes;
     }
 
+//Write a function called business trip
+//Arguments: graph, array of city names
+//Return: cost or null
+//Determine whether the trip is possible with direct flights, and how much it would cost.
+    public String businessTrip(Graph graph , ArrayList<String> cityNames ){
+        int cost = 0;
+        int weight = 0;
+        if (cityNames.size() <= 1)
+            return "null";
+
+        for (int i = 0; i < cityNames.size() - 1;i++) {
+            for (Neighbor item : getNeighbors((T) cityNames.get(i))) {
+//                System.out.println(cityNames.get(i + 1));
+                if (cityNames.get(i + 1) == item.getNode().getValue()) {
+
+                    weight = item.getWeight();
+                }
+            }
+                if (weight == 0)
+                    return "False, $0";
+
+                cost += weight;
+
+        }
+        return "True, $" + cost;
+    }
 }
 

@@ -3,6 +3,7 @@
  */
 package graph;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class App {
@@ -26,14 +27,15 @@ public class App {
         graph1.addNode("Narnia");
         graph1.addNode("Naboo");
 
-        graph1.addEdge("Pandora", "Arendelle",0);
-        graph1.addEdge("Arendelle", "Metroville",0);
-        graph1.addEdge("Arendelle", "Monstroplolis",0);
-        graph1.addEdge("Metroville", "Monstroplolis",0);
-        graph1.addEdge("Metroville", "Narnia",0);
-        graph1.addEdge("Metroville", "Naboo",0);
-        graph1.addEdge("Monstroplolis", "Naboo",0);
-        graph1.addEdge("Naboo", "Narnia",0);
+        graph1.addEdge("Pandora", "Arendelle",150);
+        graph1.addEdge("Metroville", "Pandora",82);
+        graph1.addEdge("Metroville", "Arendelle",99);
+        graph1.addEdge("Arendelle", "Monstroplolis",42);
+        graph1.addEdge("Monstroplolis", "Naboo",73);
+        graph1.addEdge("Metroville", "Monstroplolis",105);
+        graph1.addEdge("Metroville", "Narnia",37);
+        graph1.addEdge("Metroville", "Naboo",26);
+        graph1.addEdge("Naboo", "Narnia",250);
 
     graph.addEdge("A", "B",1);
     graph.addEdge("A", "C",3);
@@ -43,7 +45,13 @@ public class App {
     System.out.println(graph.size());
     System.out.println(graph.getNeighbors("A"));//B ,C
     System.out.println(graph.getNodes());// [A, B, C]
-    System.out.println( graph1.BreadthFirst("Pandora"));//Pandora, Arendelle, Metroville, Monstroplolis, Narnia, Naboo
-
+    System.out.println( graph1.BreadthFirst("Metroville"));//Pandora, Arendelle, Metroville, Monstroplolis, Narnia, Naboo
+        //[Arendelle, New Monstroplolis, Naboo]	True, $115
+        ArrayList<String > cityNames = new ArrayList<>();
+        cityNames.add("Arendelle");
+        cityNames.add("Monstroplolis");
+        cityNames.add("Naboo");
+        System.out.println(cityNames);
+        System.out.println(graph1.businessTrip(graph1,cityNames));
     }
 }
