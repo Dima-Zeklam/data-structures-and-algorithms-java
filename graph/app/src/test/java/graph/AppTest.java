@@ -4,6 +4,9 @@
 package graph;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -87,5 +90,42 @@ class AppTest {
 
         assertEquals(null,graph.BreadthFirst(null));
     }
+
+    @Test void TestbusinessTrip() {
+        Graph<String> graph1 = new Graph();
+        graph1.addNode("Pandora");
+        graph1.addNode("Arendelle");
+        graph1.addNode("Metroville");
+        graph1.addNode("Monstroplolis");
+        graph1.addNode("Narnia");
+        graph1.addNode("Naboo");
+
+        graph1.addEdge("Pandora", "Arendelle",150);
+        graph1.addEdge("Metroville", "Pandora",82);
+        graph1.addEdge("Metroville", "Arendelle",99);
+        graph1.addEdge("Arendelle", "Monstroplolis",42);
+        graph1.addEdge("Monstroplolis", "Naboo",73);
+        graph1.addEdge("Metroville", "Monstroplolis",105);
+        graph1.addEdge("Metroville", "Narnia",37);
+        graph1.addEdge("Metroville", "Naboo",26);
+        graph1.addEdge("Naboo", "Narnia",250);
+        ArrayList<String > cityNames = new ArrayList<>();
+        cityNames.add("Arendelle");
+        cityNames.add("Monstroplolis");
+        cityNames.add("Naboo");
+        assertEquals("True, $115",graph1.businessTrip(graph1,cityNames));
+    }
+    @Test void TestbusinessTripOnEmptyArray() {
+        Graph<String> graph = new Graph();
+        graph.addNode("Pandora");
+        graph.addNode("Arendelle");
+        graph.addNode("Metroville");
+        graph.addNode("Monstroplolis");
+        graph.addNode("Narnia");
+        graph.addNode("Naboo");
+        ArrayList<String > cityNames = new ArrayList<>();
+        assertEquals("null",graph.businessTrip(graph,cityNames));
+    }
+
 
 }

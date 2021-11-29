@@ -60,3 +60,21 @@ Space Complixity -> O(n) because of initialize new Arraylist
 ![graph](input.png)
 
 * Output :[Pandora, Arendelle, Metroville, Monstroplolis, Narnia, Naboo]
+
+# graph-business-trip
+# Challenge Summary
+<!-- Description of the challenge -->
+Write a function called businessTrip  that accept graph and array which Determine whether the trip is possible with direct flights, and how much it would cost.
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![graph_business_trip](graph_business_trip.png)
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Big O
+* Time Complixity -> O(n^2) because of using nested loop
+* Space Complixity -> O(1) Constant
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+* Input : graph , [Arendelle, New Monstropolis, Naboo]
+![solution](solution.png)
+* Output : True, $115
