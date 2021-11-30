@@ -127,5 +127,32 @@ class AppTest {
         assertEquals("null",graph.businessTrip(graph,cityNames));
     }
 
+    @Test void TestDebthFirst() {
+        Graph<String> graph2 = new Graph();
+        graph2.addNode("A");
+        graph2.addNode("B");
+        graph2.addNode("C");
+        graph2.addNode("D");
+        graph2.addNode("E");
+        graph2.addNode("H");
+        graph2.addNode("F");
+
+        graph2.addEdge("A", "B",1);
+        graph2.addEdge("B", "D",3);
+        graph2.addEdge("B", "C",2);
+        graph2.addEdge("C", "G",0);
+        graph2.addEdge("D", "E",2);
+        graph2.addEdge("D", "H",2);
+        graph2.addEdge("D", "F",2);
+        graph2.addEdge("H", "F",2);
+
+
+        assertEquals("[A, B, C, D, F, H, E]",graph2.depthFirst("A").toString());
+    }
+    @Test void TestDebthFirstInEmptyGraph() {
+        Graph<String> graph2 = new Graph();
+
+        assertEquals(null,graph2.depthFirst(null));
+    }
 
 }

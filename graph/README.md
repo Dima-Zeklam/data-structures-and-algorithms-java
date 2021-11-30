@@ -78,3 +78,26 @@ Big O
 * Input : graph , [Arendelle, New Monstropolis, Naboo]
 ![solution](solution.png)
 * Output : True, $115
+
+
+# Depth First Traversal
+<!-- Short summary or background information -->
+Depth First Search (DFS) algorithm traverses a graph in a depthward motion and uses a stack to remember to get the next vertex to start a search, when a dead end occurs in any iteration.
+## Challenge
+<!-- Description of the challenge -->
+Write a function called depthFirst for the Graph that accept root and Return  a set of String.
+
+Input <- root
+Output <-  Set of string
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Big O
+* Time Complexity -> O(n^2) because of using nested loop
+* Space Complexity -> O(n) because of initialize new set and stack
+## Solution
+<!-- Embedded whiteboard image -->
+![DepthInGraph](DepthFirstInTheGraph.png)
+
+
+
+
